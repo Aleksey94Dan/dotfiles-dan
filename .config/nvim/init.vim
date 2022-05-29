@@ -21,19 +21,11 @@ call plug#begin('~/.vim/plugged')
 " color schemas
 Plug 'morhetz/gruvbox'
 
-" generic interactive finder and dispatcher
-Plug 'liuchengxu/vim-clap'
+" for commentary
+" keymap: gcc
+Plug 'tpope/vim-commentary'
 
-" Requires for clojure
-Plug 'guns/vim-sexp',    {'for': 'clojure'}
-Plug 'liquidz/vim-iced', {'for': 'clojure'}
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'liquidz/vim-iced', {'for': 'clojure'}
-Plug 'liquidz/vim-iced-asyncomplete', {'for': 'lojure'}
-Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
 
 call plug#end()
 
@@ -45,9 +37,3 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
-
-" Enable vim-iced's default key mapping
-" This is recommended for newbies
-let g:iced_enable_default_key_mappings = v:true
-
-let g:sexp_mappings = {'sexp_indent': '', 'sexp_indent_top': ''}
